@@ -82,17 +82,17 @@ namespace EmployeePayrollUsingREST_API
             Console.WriteLine(response.Content);
         }
 
-        //[TestMethod]
-        //public void onCallingDeleteAPI_ShouldReturnSuccessStatus()
-        //{
-        //    //request for deleting elements from json 
-        //    RestRequest request = new RestRequest("employees/11", Method.DELETE);
-        //    //executing request using rest client
-        //    IRestResponse response = client.Execute(request);
-        //    Console.WriteLine(response.Content);
-        //    //checking status codes.
-        //    Assert.AreEqual(response.StatusCode, System.Net.HttpStatusCode.OK);
-        //}
+        [TestMethod]
+        public void onCallingDeleteAPI_ShouldReturnSuccessStatus()
+        {
+            //request for deleting elements from json 
+            RestRequest request = new RestRequest("employees/11", Method.DELETE);
+            //executing request using rest client
+            IRestResponse response = client.Execute(request);
+            Console.WriteLine(response.Content);
+            //checking status codes.
+            Assert.AreEqual(response.StatusCode, System.Net.HttpStatusCode.OK);
+        }
 
     }
 }
